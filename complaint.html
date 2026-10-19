@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Submit Complaint - MakkalConnect</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/style/complaint.css">
+</head>
+
+
+
+<body>
+    <header>
+        <h2>MakkalConnect</h2>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="abot.html">About</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+
+    <section class="login-box">
+
+        <h1>Submit a Complaint</h1>
+
+        <p>Enter the details of your local problem.</p>
+
+        <form id="complaintForm">
+
+            <label for="title">Complaint Title</label>
+            <input type="text" id="title"
+                   placeholder="Enter complaint title" required>
+
+            <label for="district">District</label>
+            <select id="district" required>
+                <option value="">Select District</option>
+                <option>Chennai</option>
+                <option>Coimbatore</option>
+                <option>Madurai</option>
+                <option>Salem</option>
+                <option>Tiruchirappalli</option>
+                <option>Tirunelveli</option>
+            </select>
+
+            <label for="category">Complaint Category</label>
+            <select id="category" required>
+                <option value="">Select Category</option>
+                <option>Road Problem</option>
+                <option>Water Supply</option>
+                <option>Electricity</option>
+                <option>Sanitation</option>
+                <option>Other</option>
+            </select>
+
+            <label for="location">Problem Location</label>
+            <input type="text" id="location"
+                   placeholder="Enter area or street" required>
+
+            <label for="description">Complaint Description</label>
+            <textarea id="description" rows="5"
+                      placeholder="Describe the problem"
+                      required></textarea>
+
+            <label for="evidence">Upload Proof (Optional)</label>
+            <input type="file" id="evidence">
+
+            <button type="submit">Submit Complaint</button>
+
+        </form>
+
+    </section>
+     <footer>
+        <p>
+            &copy; 2026 MakkalConnect |
+            Student Frontend Project
+        </p>
+    </footer>
+
+<!-- Complaint Success Popup -->
+<div id="successPopup" class="success-overlay" style="display: none;">
+
+    <div class="success-box">
+
+        <div class="success-icon">✓</div>
+
+        <h2>Complaint Submitted!</h2>
+
+        <p class="success-message">
+            Your complaint has been submitted successfully.
+        </p>
+
+        <div class="complaint-id-box">
+            <span>Complaint Reference ID</span>
+            <h3 id="complaintId">MC-000000</h3>
+        </div>
+
+        <p class="success-description">
+            Your complaint has been recorded in this demo.
+            You can track its progress in My Complaints.
+        </p>
+
+        <button type="button" onclick="goToMyComplaints()">
+            Track My Complaint
+        </button>
+
+        <button
+            type="button"
+            class="home-button"
+            onclick="closeSuccessPopup()"
+        >
+            Back to Complaint Form
+        </button>
+
+    </div>
+</div>
+<script src="/script.js"></script>
+</body>
+</html>

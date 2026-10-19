@@ -1,0 +1,263 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f6fa;
+    color: #333333;
+}
+header {
+    background-color: #961515;
+    color: white;
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: white;
+    margin: 0;
+    font-size: 26px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+nav a:hover {
+    color: #f0d65c;
+}
+
+h1 {
+    color: #961515;
+}
+
+.login-box h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.login-box > p {
+    text-align: center;
+    color: #666666;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.login-box {
+    background-color: white;
+    max-width: 650px;
+    margin: 35px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.login-box label {
+    display: block;
+    font-weight: bold;
+    margin-top: 16px;
+    margin-bottom: 7px;
+    color: #333333;
+}
+
+.login-box input:not([type="file"]),
+.login-box select,
+.login-box textarea {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    background-color: white;
+}
+
+.login-box textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.login-box input[type="file"] {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.login-box input:focus,
+.login-box select:focus,
+.login-box textarea:focus {
+    outline: 2px solid #d4b91d;
+    border-color: #961515;
+}
+
+.login-box button {
+    width: 100%;
+    background-color: #d4b91d;
+    color: #ffffff;
+    padding: 14px;
+    margin-top: 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background-color: #bda316;
+}
+
+.success {
+    display: none;
+    background-color: #d9f2df;
+    color: #17652c;
+    padding: 15px;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 6px;
+}
+.login-box input[type="file"] {
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    padding: 12px;
+    background-color: #fffaf0;
+    border: 1px dashed #961515;
+    border-radius: 6px;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 14px;
+}
+.login-box button[type="submit"] {
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+    padding: 14px;
+    background-color: #d4b91d;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.login-box button[type="submit"]:hover {
+    background-color: #961515;
+}
+.login-box button[type="submit"]:active {
+    transform: scale(0.98);
+}
+  footer {
+            background: #961515;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        footer p {
+            color: white;
+            font-size: 14px;
+        }
+
+/* Complaint Success Popup */
+
+.success-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 9999;
+}
+
+.success-box {
+    background: white;
+    width: 100%;
+    max-width: 420px;
+    padding: 30px 25px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+    animation: popupAppear 0.35s ease;
+}
+
+.success-icon {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    background: #e1f7e8;
+    color: #218838;
+    font-size: 48px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.success-box h2 {
+    color: #218838;
+    margin: 10px 0;
+}
+
+.success-message {
+    color: #444;
+    font-size: 16px;
+}
+
+.complaint-id-box {
+    background: #fff8df;
+    border: 1px dashed #d4b91d;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.complaint-id-box span {
+    color: #555;
+    font-size: 13px;
+}
+
+.complaint-id-box h3 {
+    color: #961515;
+    margin: 8px 0 0;
+}
+
+.success-description {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.success-box button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 7px;
+    background: #961515;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.success-box button:hover {
+    background: #741010;
+}
+
+.success-box button.home-button {
+    background: #eeeeee;
+    color: #333;
+}
+
+.success-box button.home-button:hover {
+    background: #dddddd;
+}
+

@@ -1,0 +1,194 @@
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background-color: #f4f6f9;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+    background-color: #961515;
+    color: white;
+    padding: 15px;
+}
+
+header h2 {
+    display: inline-block;
+    margin-right: 700px;
+}
+
+nav {
+    display: inline-block;
+}
+nav a:hover {
+    color: #f0d65c;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+    margin-left: 40px;
+}
+
+        .dashboard-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 30px 20px;
+        }
+
+        .welcome-section {
+            background: #961515;
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+
+        .welcome-section h1 {
+            color: white;
+            margin-top: 0;
+        }
+
+        .welcome-section p {
+            color: white;
+            font-size: 16px;
+        }
+
+        .section-title {
+            color: #961515;
+            margin: 30px 0 18px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 22px;
+            border-radius: 10px;
+            border-left: 5px solid #d4b91d;
+            box-shadow: 0 3px 12px #00000010;
+        }
+
+        .stat-card p {
+            font-size: 15px;
+            color: #555;
+        }
+
+        .stat-card h2 {
+            color: #961515;
+            font-size: 30px;
+            margin-bottom: 0;
+        }
+
+        .activity-card,
+        .mla-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 3px 12px #00000010;
+        }
+
+        .activity-card {
+            margin-top: 20px;
+        }
+
+        .progress-track {
+            height: 12px;
+            background: #e5e5e5;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 15px 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            width: 0%;
+            background: #2e8b57;
+            transition: width 0.4s;
+        }
+
+        .mla-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .mla-photo {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+            border-radius: 8px;
+            background: #eeeeee;
+        }
+
+        .mla-card h3 {
+            color: #961515;
+            margin-bottom: 10px;
+        }
+
+        .mla-card p {
+            font-size: 14px;
+            overflow-wrap: anywhere;
+        }
+
+        .action-button {
+            display: inline-block;
+            width: 100%;
+            padding: 12px;
+            background: #d4b91d;
+            color: #222;
+            text-decoration: none;
+            text-align: center;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 12px;
+        }
+
+        .action-button:hover {
+            background: #c3a916;
+        }
+
+        .status-message {
+            color: #555;
+            padding: 15px 0;
+        }
+
+        .activity-list {
+            padding-left: 20px;
+        }
+
+        .activity-list li {
+            margin: 12px 0;
+        }
+
+         footer {
+            background: #961515;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        footer p {
+            color: white;
+            font-size: 14px;
+        }
+        button {
+            background-color: #d4b91d;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            margin-left: 500px;
+}
+
+       

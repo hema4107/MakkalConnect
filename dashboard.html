@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Citizen Dashboard | MakkalConnect</title>
+    <link rel="stylesheet" href="/style/dashboard.css">
+</head>
+<script src="/dashboard.js"></script>
+<body>
+
+   
+    <header>
+        <h2>MakkalConnect</h2>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="abot.html">About</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+    <main class="dashboard-container">
+
+      
+        <section class="welcome-section">
+            <h1>Citizen Dashboard</h1>
+            <p>
+                Welcome to MakkalConnect. Track your activities,
+                monitor complaint progress, and connect with your MLA.
+            </p>
+        </section>
+        <a href="complaint.html"><button>submit complaint</button></a>
+       
+        <section>
+            <h2 class="section-title">Your Activity Overview</h2>
+
+            <div class="stats-grid">
+                <article class="stat-card">
+                    <p>Total Complaints</p>
+                    <h2 id="totalComplaints">--</h2>
+                </article>
+
+                <article class="stat-card">
+                    <p>Pending</p>
+                    <h2 id="pendingComplaints">--</h2>
+                </article>
+
+                <article class="stat-card">
+                    <p>In Progress</p>
+                    <h2 id="inProgressComplaints">--</h2>
+                </article>
+
+                <article class="stat-card">
+                    <p>Resolved</p>
+                    <h2 id="resolvedComplaints">--</h2>
+                </article>
+            </div>
+        </section>
+
+       
+        <section class="activity-card">
+            <h2 class="section-title">Complaint Resolution Progress</h2>
+
+            <p id="progressText">Waiting for complaint data...</p>
+
+            <div
+                class="progress-track"
+                role="progressbar"
+                aria-label="Complaint resolution progress"
+                aria-valuemin="0"
+                aria-valuemax="100"
+                aria-valuenow="0"
+                id="progressBar"
+            >
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </section>
+
+        <!-- Recent Activities -->
+        <section class="activity-card">
+            <h2 class="section-title">Recent Activities</h2>
+
+            <ul class="activity-list" id="activityList">
+                <li>Loading recent activities...</li>
+            </ul>
+        </section>
+
+        <!-- MLA Directory -->
+        <section>
+            <h2 class="section-title">Meet Your MLA</h2>
+
+            <p>
+                View your elected representatives and submit a complaint
+                directly through their complaint form.
+            </p>
+
+            <div id="mlaList" class="mla-grid">
+                <p class="status-message">Loading MLA details from backend...</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            &copy; 2026 MakkalConnect |
+            Student Frontend Project
+        </p>
+    </footer>
+
+</body>
+</html>

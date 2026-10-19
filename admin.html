@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MakkalConnect | Admin Dashboard</title>
+
+   <link rel="stylesheet" href="/style/admin.css">
+    <script src="/admin.js" defer></script> 
+    
+</head>
+
+<body>
+
+    <header class="navbar">
+        <h2>MakkalConnect | Admin</h2>
+        <nav>
+            <a href="admin-dashboard.html">Dashboard</a>
+            <a href="index.html">Public Website</a>
+            <a href="login.html">Logout</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="heading">
+            <div>
+                <h1>Admin Dashboard</h1>
+                <p class="muted">Manage and respond to citizen complaints.</p>
+            </div>
+            <p class="muted" id="lastUpdated">Local demo data</p>
+        </section>
+
+        <section class="stats" aria-label="Complaint statistics">
+            <article class="stat-card">
+                <p>Total Complaints</p>
+                <h2 id="totalCount">0</h2>
+            </article>
+
+            <article class="stat-card">
+                <p>Pending</p>
+                <h2 id="pendingCount">0</h2>
+            </article>
+
+            <article class="stat-card">
+                <p>In Progress</p>
+                <h2 id="progressCount">0</h2>
+            </article>
+
+            <article class="stat-card">
+                <p>Resolved</p>
+                <h2 id="resolvedCount">0</h2>
+            </article>
+        </section>
+
+        <section class="panel">
+            <h2>All Complaints</h2>
+
+            <div class="filters">
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Search by ID, title or district..."
+                    aria-label="Search complaints"
+                >
+
+                <select id="statusFilter" aria-label="Filter by status">
+                    <option value="All">All statuses</option>
+                    <option value="Pending">Pending</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Resolved">Resolved</option>
+                </select>
+            </div>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Reference ID</th>
+                            <th>Complaint</th>
+                            <th>District</th>
+                            <th>Date Submitted</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="complaintTable"></tbody>
+                </table>
+            </div>
+
+            <p class="empty" id="emptyMessage" hidden>
+                No complaints found. Complaints submitted in this browser
+                will appear here.
+            </p>
+        </section>
+
+        <section class="panel" id="detailsPanel">
+            <h2>Complaint Details & Reply</h2>
+            <p class="muted" id="selectMessage">
+                Select a complaint from the table to view its details and reply.
+            </p>
+
+            <div id="complaintDetails" hidden>
+                <div class="message" id="successMessage" role="status"></div>
+
+                <div class="details-grid">
+                    <div class="detail-item">
+                        <strong>Reference ID</strong>
+                        <p id="detailId"></p>
+                    </div>
+
+                    <div class="detail-item">
+                        <strong>Complaint Title</strong>
+                        <p id="detailTitle"></p>
+                    </div>
+
+                    <div class="detail-item">
+                        <strong>District</strong>
+                        <p id="detailDistrict"></p>
+                    </div>
+
+                    <div class="detail-item">
+                        <strong>Category</strong>
+                        <p id="detailCategory"></p>
+                    </div>
+
+                    <div class="detail-item">
+                        <strong>Location</strong>
+                        <p id="detailLocation"></p>
+                    </div>
+
+                    <div class="detail-item">
+                        <strong>Date Submitted</strong>
+                        <p id="detailDate"></p>
+                    </div>
+
+                    <div class="detail-item">
+                        <strong>Complaint Description</strong>
+                        <p id="detailDescription"></p>
+                    </div>
+
+                    <div class="detail-item">
+                        <strong>Evidence</strong>
+                        <p id="detailEvidence">No evidence details saved.</p>
+                    </div>
+                </div>
+
+                <div class="editor">
+                    <div>
+                        <label for="statusEditor">Update Status</label>
+                        <select id="statusEditor">
+                            <option value="Pending">Pending</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Resolved">Resolved</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="replyEditor">Reply to Citizen</label>
+                        <textarea
+                            id="replyEditor"
+                            placeholder="Write an update or response for the citizen..."
+                        ></textarea>
+                    </div>
+
+                    <div class="editor-actions">
+                        <button type="button" class="primary" id="saveButton">
+                            Save Status & Reply
+                        </button>
+                        <button type="button" class="secondary" id="cancelButton">
+                            Clear Selection
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        MakkalConnect Admin Portal · Demonstration version
+    </footer>
+
+</body>
+</html>
